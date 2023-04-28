@@ -56,6 +56,5 @@ Component1 As CanvasComponent:
         Size: =21
         Text: ="Emotions Identified"
         Width: =640
-        Y: =3
         ZIndex: =2
 

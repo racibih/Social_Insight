@@ -67,7 +67,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "WrapCount",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "WrapCount",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "TemplateSize",
         "TemplatePadding",
         "Layout",
