@@ -1,0 +1,59 @@
+{
+  "19f5a8e7-3254-4924-8dae-843372214036": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Video Indexer (V2)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1601/1.0.1601.3047/videoindexer-v2/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_videoindexer-v2",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "VideoIndexer(V2)"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "19f5a8e7-3254-4924-8dae-843372214036"
+  },
+  "80ccf343-153e-4c53-b593-b3d0c1b5f7ae": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Video Indexer (V2)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1601/1.0.1601.3047/videoindexer-v2/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_videoindexer-v2",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "VideoIndexer(V2)",
+      "VideoIndexer(V2)_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "80ccf343-153e-4c53-b593-b3d0c1b5f7ae"
+  },
+  "e4f407b0-e756-400c-a826-23dd4a7171a0": {
+    "connectionRef": {
+      "apiTier": "Premium",
+      "authenticationType": "keyBasedAuth",
+      "displayName": "Azure Blob Storage",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/azureblob/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_azureblob",
+      "parameterHints": {},
+      "parameterHintsV2": {},
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_azureblob/connections/shared-azureblob-499cd46c-a50b-4df4-ab02-c56fb3d5ce94"
+    },
+    "datasets": {},
+    "dataSources": [
+      "AzureBlobStorage"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "endpoints": [
+      "ibihstorage"
+    ],
+    "id": "e4f407b0-e756-400c-a826-23dd4a7171a0"
+  }
+}

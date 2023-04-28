@@ -1,0 +1,163 @@
+"'Upload Video URL' As screen":
+
+    AddMediaWithImage2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        UploadedImage2 As image:
+            Height: =309
+            Image: =If(IsBlank(AddMediaButton2.Media), SampleImage, AddMediaButton2.Media)
+            ImagePosition: =ImagePosition.Fill
+            Width: =293
+            Y: =827
+            ZIndex: =2
+
+        AddMediaButton2 As addMedia:
+            ChangePictureText: ="Change Video"
+            Height: =309
+            Size: =25
+            Text: ="Select a file to Upload"
+            Width: =293
+            Y: =827
+            ZIndex: =3
+
+    Button1 As button:
+        Height: =130
+        OnSelect: =AzureBlobStorage.CreateFile(Gallery6.Selected.Name,TextInput1.Text, UploadedImage2.Image)
+        Size: =24
+        Text: ="Upload"
+        Width: =347
+        X: =293
+        Y: =1006
+        ZIndex: =4
+
+    TextInput1 As text:
+        Default: ="Enter File Name"
+        Height: =107
+        Size: =21
+        Width: =347
+        X: =293
+        Y: =853
+        ZIndex: =5
+
+    "Gallery6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Height: =291
+        Items: =AzureBlobStorage.ListRootFolderV2().value
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Min(96, Self.Height - 60)
+        Y: =76
+        ZIndex: =6
+
+        Title11 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Path
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Separator12 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+    Label3 As label:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =70
+        Size: =21
+        Text: ="Select a Container"
+        Width: =640
+        Y: =6
+        ZIndex: =7
+
+    "Gallery9 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Height: =298
+        Items: =AzureBlobStorage.ListFolderV2(Gallery6.Selected.Id).value
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =298
+        WrapCount: =2
+        Y: =404
+        ZIndex: =8
+
+        Title19 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle15 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.LastModified
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title19.Y + Title19.Height + 2
+            ZIndex: =2
+
+        Body6 As label:
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Path
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle15.Y + Subtitle15.Height + 4
+            ZIndex: =3
+
+        Separator20 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =153
+            ZIndex: =5
+
+        Icon1 As icon.Download:
+            Icon: =Icon.Download
+            OnSelect: =Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path).WebUrl)
+            X: =556
+            Y: =46
+            ZIndex: =6
+
+    Label4 As label:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =60
+        Size: =21
+        Text: ="Files list"
+        Width: =640
+        Y: =345
+        ZIndex: =9
+
