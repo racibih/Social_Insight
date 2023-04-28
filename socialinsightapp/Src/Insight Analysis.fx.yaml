@@ -26,7 +26,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height - 100
+            Height: =378
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -39,4 +39,15 @@
                 X: =40
                 Y: =40
                 ZIndex: =1
+
+        DataCard2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =540
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =2
 

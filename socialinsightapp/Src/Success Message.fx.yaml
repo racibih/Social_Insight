@@ -22,9 +22,18 @@
         AutoHeight: =true
         Height: =iconCircle1.Height
         Size: =21
-        Text: ="This was successfully completed"
+        Text: ="Analysis Complete!"
         Width: =Parent.Width * 0.75
         X: =Parent.Width/2 - Self.Width/2
         Y: =iconCheck1.Y + iconCheck1.Height + 100
         ZIndex: =3
+
+    "Progress1 As 'Progress Bar'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =85
+        Thickness: ="Large"
+        Width: =450
+        X: =110
+        Y: =144
+        ZIndex: =4
 
