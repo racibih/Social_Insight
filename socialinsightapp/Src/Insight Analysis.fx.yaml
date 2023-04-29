@@ -2,7 +2,7 @@
     OnVisible: |-
         =ClearCollect(
             Videos,
-            VideoIndexerV2.SearchVideos("d4c1bdf2-3e96-41c9-8a54-8a6071330261
+            VideoIndexer(V2).SearchVideos("d4c1bdf2-3e96-41c9-8a54-8a6071330261
         ", "Query=SortBy:CreatedTimeDescending")
         );
         ClearCollect(
