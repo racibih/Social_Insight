@@ -1,15 +1,16 @@
 "'Insight Analysis' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |-
+    OnVisible: |
         =ClearCollect(
             Videos,
-            VideoIndexer(V2).SearchVideos("d4c1bdf2-3e96-41c9-8a54-8a6071330261
-        ", "Query=SortBy:CreatedTimeDescending")
+            'VideoIndexer(V2)'.Searchvideos("trial","d4c1bdf2-3e96-41c9-8a54-8a6071330261", "dc62e20aa27d439fab1d788b97f426e8",{filters: "SortBy:CreatedTimeDescending",
+                    top: 1
+                    }).results
         );
         ClearCollect(
             Emotions,
-            VideoIndexerV2.GetVideoIndex("d4c1bdf2-3e96-41c9-8a54-8a6071330261
-        ", First(Videos).id, "Emotion")
-        )
+            'VideoIndexer(V2)'.GetVideoIndex("trial","d4c1bdf2-3e96-41c9-8a54-8a6071330261", First(Videos).id, "Emotion")
+            
+        );
 
     RectQuickActionBar2 As rectangle:
         Height: =88
@@ -27,8 +28,6 @@
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         DelayItemLoading: =true
         Height: =858
-        Items: |
-            =
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -51,7 +50,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.SampleHeading
+            Text: =
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image1.Width - 104
             X: =Image1.X + Image1.Width + 24
@@ -65,7 +64,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.SampleText
+            Text: =
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X
