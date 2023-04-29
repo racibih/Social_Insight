@@ -61,7 +61,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/29/2023 04:33:45",
+  "HeaderLastSavedDateTimeUTC": "04/29/2023 05:06:02",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "19f5a8e7-3254-4924-8dae-843372214036": "\"/providers/microsoft.powerapps/apis/shared_videoindexer-v2/connections/eb89fd392dd54874865900e2aadfcf95\"",
@@ -263,7 +263,7 @@
       "videoPlayback": 1
     },
     "DeserializationLoadTime": 7.0872904,
-    "ErrorCount": 3
+    "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

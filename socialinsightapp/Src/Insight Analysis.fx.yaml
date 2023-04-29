@@ -1,5 +1,5 @@
 "'Insight Analysis' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |
+    OnVisible: |+
         =ClearCollect(
             Videos,
             'VideoIndexer(V2)'.Searchvideos("trial","d4c1bdf2-3e96-41c9-8a54-8a6071330261", "dc62e20aa27d439fab1d788b97f426e8",{filters: "SortBy:CreatedTimeDescending",
@@ -8,9 +8,9 @@
         );
         ClearCollect(
             Emotions,
-            'VideoIndexer(V2)'.GetVideoIndex("trial","d4c1bdf2-3e96-41c9-8a54-8a6071330261", First(Videos).id, "Emotion")
-            
-        );
+            'VideoIndexer(V2)'.GetVideoIndex("trial","d4c1bdf2-3e96-41c9-8a54-8a6071330261",TextInput1.Text, "dc62e20aa27d439fab1d788b97f426e8").summarizedInsights
+            )
+        
 
     RectQuickActionBar2 As rectangle:
         Height: =88
@@ -21,13 +21,14 @@
         Align: =Align.Center
         Height: =88
         Size: =27
-        Text: ="[Title]"
+        Text: ="Sentimental Analysis"
         Width: =Parent.Width
         ZIndex: =2
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         DelayItemLoading: =true
         Height: =858
+        Items: =Emotions
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
