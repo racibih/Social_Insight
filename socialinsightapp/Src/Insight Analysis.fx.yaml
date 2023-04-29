@@ -6,6 +6,115 @@
         Width: =Parent.Width
         ZIndex: =1
 
+    "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Height: =411
+        Items: |
+            =AzureBlobStorage.ListFolderV2("insightstore").value
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Min(96, Self.Height - 60)
+        Y: =88
+        ZIndex: =1
+
+        Title7 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        NextArrow5 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Separator7 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        DelayItemLoading: =true
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Y: =542
+        ZIndex: =1
+
+        Title9 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.SampleHeading
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle7 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.SampleText
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title9.Y + Title9.Height + 4
+            ZIndex: =2
+
+        NextArrow7 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator9 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
     LblAppName2 As label:
         Align: =Align.Center
         Height: =88
@@ -14,13 +123,14 @@
         Width: =Parent.Width
         ZIndex: =2
 
-    Gallery1 As gallery.variableTemplateHeightGallery:
-        DelayItemLoading: =true
-        Height: =810
-        Items: =ParseJSON(AzureBlobStorage.GetFileContentByPathV2("ibihstorage", "insightstore/" & First(SortByColumns(AzureBlobStorage.ListFolderV2("insightstore").value, "LastModified", SortOrder.Descending)).Name)).summarizedInsights.emotions
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =280
-        Y: =147
+    Button3 As button:
+        Height: =70
+        OnSelect: |
+            =OnSelect = Set(emotions, ParseJSON(Gallery3.Selected.insights).summarizedInsights.emotions)
+        Size: =24
+        Text: ="Analyze"
+        Width: =280
+        X: =16
+        Y: =408
         ZIndex: =3
 
