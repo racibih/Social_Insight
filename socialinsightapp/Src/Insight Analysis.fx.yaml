@@ -14,15 +14,13 @@
         Width: =Parent.Width
         ZIndex: =2
 
-    Button3 As button:
-        Height: =70
-        OnSelect: |
-            =ClearCollect(colBlobs, AzureBlobStorage.ListFolderV2("insightstore"))
-            SortDescending(colBlobs, LastModified)[0]
-        Size: =24
-        Text: ="Button"
-        Width: =280
-        X: =120
-        Y: =272
+    Gallery1 As gallery.variableTemplateHeightGallery:
+        DelayItemLoading: =true
+        Height: =810
+        Items: =ParseJSON(AzureBlobStorage.GetFileContentByPathV2("ibihstorage", "insightstore/" & First(SortByColumns(AzureBlobStorage.ListFolderV2("insightstore").value, "LastModified", SortOrder.Descending)).Name)).summarizedInsights.emotions
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =280
+        Y: =147
         ZIndex: =3
 
