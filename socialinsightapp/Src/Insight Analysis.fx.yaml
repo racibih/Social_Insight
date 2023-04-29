@@ -16,7 +16,7 @@
 
     Button3 As button:
         Height: =70
-        OnSelect: =ClearCollect(colBlobs, AzureBlobStorage.ListBlobs("container-name"))
+        OnSelect: =ClearCollect(colBlobs, AzureBlobStorage.ListFolderV2("insightstore"))
         Size: =24
         Text: ="Button"
         Width: =280
