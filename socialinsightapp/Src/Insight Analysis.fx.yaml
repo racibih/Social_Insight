@@ -57,6 +57,7 @@
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         DelayItemLoading: =true
+        Items: =AzureBlobStorage
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -126,7 +127,7 @@
     Button3 As button:
         Height: =70
         OnSelect: |
-            =OnSelect = Set(emotions, ParseJSON(Gallery3.Selected.insights).summarizedInsights.emotions)
+            =Set(Emotions, ParseJSON(Gallery3.Selected.Name).summarizedInsights.emotions)
         Size: =24
         Text: ="Analyze"
         Width: =280
