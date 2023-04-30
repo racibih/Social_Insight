@@ -1,4 +1,27 @@
 Login As screen:
+    Fill: =RGBA(0, 0, 0, 0)
+
+    TextInput2 As text:
+        BorderColor: =RGBA(219, 219, 219, 1)
+        BorderThickness: =0
+        Clear: =true
+        Default: =""
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =88
+        HintText: ="username"
+        HoverBorderColor: =RGBA(237, 237, 237, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingLeft: =75
+        PaddingTop: =25
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =18
+        Width: =560
+        X: =48
+        Y: =714
+        ZIndex: =3
 
     Group1 As group:
         Height: =5
@@ -19,7 +42,7 @@ Login As screen:
             ZIndex: =1
 
         Label2_1 As label:
-            Color: =RGBA(212, 175, 55, 1)
+            Color: =RGBA(255, 191, 0, 1)
             Font: =Font.Georgia
             FontWeight: =FontWeight.Bold
             Height: =108
@@ -29,4 +52,44 @@ Login As screen:
             X: =297
             Y: =47
             ZIndex: =2
+
+    Button4 As button:
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =72
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: ="LOGIN"
+        Width: =548
+        X: =60
+        Y: =849
+        ZIndex: =4
+
+    Label5 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 191, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Height: =60
+        Size: =18
+        Text: ="Forgot Password?"
+        Width: =328
+        X: =170
+        Y: =921
+        ZIndex: =5
+
+    Label5_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 191, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Height: =60
+        Size: =18
+        Text: ="Register!"
+        Width: =328
+        X: =312
+        Y: =1062
+        ZIndex: =6
 
