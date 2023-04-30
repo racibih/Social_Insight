@@ -8,7 +8,7 @@
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         DelayItemLoading: =true
-        Height: =411
+        Height: =390
         Items: |
             =AzureBlobStorage.ListFolderV2("insightstore").value
         Layout: =Layout.Vertical
@@ -57,12 +57,12 @@
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         DelayItemLoading: =true
-        Items: =AzureBlobStorage
+        Height: =555
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
-        Y: =542
+        Y: =581
         ZIndex: =1
 
         Title9 As label:
@@ -132,6 +132,6 @@
         Text: ="Analyze"
         Width: =280
         X: =16
-        Y: =408
+        Y: =494
         ZIndex: =3
 
